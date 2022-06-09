@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Cards = () => {
+export const PlanetCard = () => {
   return (
     <div className="card me-3" style={{ width: "18rem" }}>
       <img
