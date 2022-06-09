@@ -1,3 +1,9 @@
 /* 
     General Styles
 */
+
+div.scrollmenu {
+    overflow: scroll;
+    white-space: nowrap;
+    width: 100%;
+}
