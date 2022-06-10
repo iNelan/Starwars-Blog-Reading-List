@@ -28,12 +28,5 @@ export const Home = () => {
       <div class="col-3"><PlanetCard /></div>
     </div>
 
-    {/* <div className="d-flex scrollmenu ">
-      
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-    </div> */}
   </div>
 );};
