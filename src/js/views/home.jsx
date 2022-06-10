@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/home.css";
-import { Cards } from "../component/Cards.jsx";
+import { CharacterCard } from "../component/CharacterCard.jsx";
 import { PlanetCard } from "../component/PlanetCard.jsx";
 
 
@@ -11,12 +11,11 @@ export const Home = () => {
 
 	  <h1>Characters</h1>
     <div class="d-flex overflow-auto mt-5 Characters">
-      <div class="col-3"><Cards /></div>
-      <div class="col-3"><Cards /></div>
-      <div class="col-3"><Cards /></div>
-	    <div class="col-3"><Cards /></div>
-      <div class="col-3"><Cards /></div>
-      <div class="col-3"><Cards /></div>
+      <div class="col-3"><CharacterCard /></div>
+      <div class="col-3"><CharacterCard /></div>
+      <div class="col-3"><CharacterCard /></div>
+      <div class="col-3"><CharacterCard /></div>
+      <div class="col-3"><CharacterCard /></div>
     </div>
 
 

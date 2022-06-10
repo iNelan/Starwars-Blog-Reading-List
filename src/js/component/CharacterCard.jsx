@@ -1,23 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const PlanetCard = () => {
+export const CharacterCard = () => {
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
         <img
-          src="https://www.nosolobits.com/imagenes/guia/coruscant_1843754588.jpg"
+          src="https://elcomercio.pe/resizer/CCzKYeli5rmsCSECl_r9VfrE8s4=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IN5YML5RRFNBKOV2T3UVJ6VLI.jpg"
           alt="placehold.it"
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">Planeta 1</h5>
+          <h5 className="card-title">CUTE YODA</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Population:</li>
-            <li className="list-group-item">Terrain:</li>
+            <li className="list-group-item">Gender:</li>
+            <li className="list-group-item">Hair Color:</li>
+            <li className="list-group-item">Eye Color:</li>
             <li className="list-group-item"></li>
           </ul>
-          <Link to="/detailPlanet"> 
+          <Link to="/detailCharacter"> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>
@@ -39,3 +40,4 @@ export const PlanetCard = () => {
     </>
   );
 };
+
