@@ -18,7 +18,7 @@ export const VehicleCard = () => {
             <li className="list-group-item">Flight:</li>
             <li className="list-group-item"></li>
           </ul>
-          <Link to="/detailCharacter"> 
+          <Link to="/SingleVehicle"> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>

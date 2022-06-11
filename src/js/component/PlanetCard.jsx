@@ -17,7 +17,7 @@ export const PlanetCard = () => {
             <li className="list-group-item">Terrain:</li>
             <li className="list-group-item"></li>
           </ul>
-          <Link to="/detailPlanet"> 
+          <Link to={"/SinglePlanet"}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>
