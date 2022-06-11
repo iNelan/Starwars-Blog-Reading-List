@@ -6,12 +6,12 @@ export const CharacterCard = () => {
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
         <img
-          src="https://elcomercio.pe/resizer/CCzKYeli5rmsCSECl_r9VfrE8s4=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IN5YML5RRFNBKOV2T3UVJ6VLI.jpg"
+          src="https://w0.peakpx.com/wallpaper/297/34/HD-wallpaper-rise-of-skywalker-poster-rise-of-skywalker.jpg"
           alt="placehold.it"
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">CUTE YODA</h5>
+          <h5 className="card-title">Rey</h5>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">Gender:</li>
             <li className="list-group-item">Hair Color:</li>

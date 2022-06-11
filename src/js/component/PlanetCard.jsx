@@ -6,7 +6,7 @@ export const PlanetCard = () => {
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
         <img
-          src="https://www.nosolobits.com/imagenes/guia/coruscant_1843754588.jpg"
+          src="https://cloudfront-us-east-1.images.arcpublishing.com/sdpnoticias/CVCXG6SP6BPCXCQQ5HSYWS3MM4.png"
           alt="placehold.it"
           className="card-img-top"
         />
