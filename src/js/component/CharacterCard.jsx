@@ -18,7 +18,7 @@ export const CharacterCard = () => {
             <li className="list-group-item">Eye Color:</li>
             <li className="list-group-item"></li>
           </ul>
-          <Link to="/detailCharacter"> 
+          <Link to={"/SingleCharacter"}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>

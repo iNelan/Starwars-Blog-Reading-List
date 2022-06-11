@@ -15,9 +15,9 @@ export const Navbar = () => {
               height="44"
             />
           </Link>
-          <div class="dropdown">
+          <div className="dropdown">
             <button
-              class="btn btn-primary dropdown-toggle"
+              className="btn btn-primary dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
@@ -27,17 +27,17 @@ export const Navbar = () => {
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Action
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Another action
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Something else here
                 </a>
               </li>
