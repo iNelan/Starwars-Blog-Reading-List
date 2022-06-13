@@ -6,7 +6,15 @@ import DetailCharacter from "../component/DetailCharacter.jsx";
 
 import "../../styles/demo.css";
 
-export const SingleCharacter = () => {
+export const SingleCharacter = (props) => {
+
+  useEffect(()=> {
+    fetch("https://www.swapi.tech/api/people/")
+    .then
+    .then
+  },[])
+  
+
   return (
     <div className="container">
       <DetailCharacter />
