@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+
+
   return (
     <>
       <nav className="navbar navbar-light bg-light mb-3">
         <div className="container">
-          <Link to="/">
-            <a className="navbar-brand" />
+          <Link className="navbar-brand" to="/">
+            
             <img
               src="https://images.tcdn.com.br/img/img_prod/476855/adesivo_star_wars_logo_mod2_varias_cores_856_1_20180104164008.jpg"
               alt="logo Star Wars"
@@ -25,7 +27,7 @@ export const Navbar = () => {
             >
               Favoritos <span className="badge badge-light">0</span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
                 <a className="dropdown-item" href="#">
                   Action

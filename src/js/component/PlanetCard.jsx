@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const PlanetCard = () => {
+export const PlanetCard = ({name, id, population, terrain}) => {
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
@@ -11,13 +11,13 @@ export const PlanetCard = () => {
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">Planeta 1</h5>
+          <h5 className="card-title">{name}</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Population:</li>
-            <li className="list-group-item">Terrain:</li>
-            <li className="list-group-item"></li>
+            
+            <li className="list-group-item">Population : {population}</li>
+            <li className="list-group-item">Terrain : {terrain}</li>
           </ul>
-          <Link to={"/SinglePlanet"}> 
+          <Link to={"/SinglePlanet/"+id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>

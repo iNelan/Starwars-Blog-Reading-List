@@ -7,7 +7,7 @@ import DetailPlanet from "../component/DetailPlanet.jsx";
 
 import "../../styles/demo.css";
 
-export const SinglePlanet = () => {
+export const SinglePlanet = (props) => {
   return (
     <div className="container">
       <DetailPlanet />

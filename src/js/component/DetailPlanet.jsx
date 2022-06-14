@@ -1,6 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
+import { Context } from "../store/appContext";
+import { useParams } from "react-router-dom";
 
 const DetailPlanet = () => {
+  const {store} = useContext (Context);
+  const {theid} = useParams();
+
+  console.log(store.infoPlanet);
+
   return (
     <>
       <div className="container">
@@ -11,7 +18,7 @@ const DetailPlanet = () => {
             </div>
             <div className="col-md-8">
               <div className="card-body text-center">
-                <h5 className="card-title">Planet Info</h5>
+                <h5 className="card-title">{store.infoPlanet[theid]?.name}</h5>
                 <p className="card-text">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
@@ -27,13 +34,31 @@ const DetailPlanet = () => {
       </div>
       {/* Características */}
     <div className="container">
-    <hr style={{ color: "red", height: "2px" }} />
-      <div className="d-flex justify-content-between">
-        <span className="eyes text-danger fw-bold">Name</span>
-        <span className="name text-danger fw-bold">Climat</span>
-        <span className="genre text-danger fw-bold">Population</span>
-        <span className="height text-danger fw-bold">Diameter</span>
-        <span className="birth text-danger fw-bold">Rotation Period</span>
+    <div className="lineaSeparadora bg-danger mt-4 mb-4"> </div>
+      <div className="row text-center text-danger fw-bolder">
+        <div className="col-2 r">
+          <p className="fw-bolder"> Name: </p>
+          <p className=""> {store.infoPlanet[theid]?.name} </p>
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> Climate </p>
+          <p className=""> {store.infoPlanet[theid]?.climate} </p>
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> Population </p>
+          <p className=""> {store.infoPlanet[theid]?.population} </p>
+        </div>
+        <div className="col-2">
+          <p className="mb-0 fw-bolder"> Orbital </p>
+          <p className="fw-bolder">Period </p>
+        </div>
+        <div className="col-2">
+          <p className="mb-0 fw-bolder"> Rotation </p>
+          <p className="fw-bolder"> Period </p>
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> Diameter </p>
+        </div>
       </div>
     </div>
  

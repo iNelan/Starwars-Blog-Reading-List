@@ -8,11 +8,6 @@ import "../../styles/demo.css";
 
 export const SingleCharacter = (props) => {
 
-  useEffect(()=> {
-    fetch("https://www.swapi.tech/api/people/")
-    .then
-    .then
-  },[])
   
 
   return (

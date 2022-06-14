@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const CharacterCard = ({name, id}) => {
+export const CharacterCard = ({name, id, height}) => {
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
@@ -13,12 +13,12 @@ export const CharacterCard = ({name, id}) => {
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Gender:</li>
-            <li className="list-group-item">Hair Color:</li>
-            <li className="list-group-item">Eye Color:</li>
+            <li className="list-group-item">{height}</li>
+            <li className="list-group-item">{name}</li>
+            <li className="list-group-item">{name}</li>
             <li className="list-group-item"></li>
           </ul>
-          <Link to={"/SingleCharacter"+id}> 
+          <Link to={"/SingleCharacter/"+id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>
