@@ -49,15 +49,17 @@ const DetailPlanet = () => {
           <p className=""> {store.infoPlanet[theid]?.population} </p>
         </div>
         <div className="col-2">
-          <p className="mb-0 fw-bolder"> Orbital </p>
-          <p className="fw-bolder">Period </p>
+          <p className="fw-bolder"> Orbital P: </p>
+          <p className="mt-3"> {store.infoPlanet[theid]?.orbital_period} </p>
+          
         </div>
         <div className="col-2">
-          <p className="mb-0 fw-bolder"> Rotation </p>
-          <p className="fw-bolder"> Period </p>
+          <p className="fw-bolder"> Rotation P: </p>
+          <p className="mt-3"> {store.infoPlanet[theid]?.rotation_period} </p>
         </div>
         <div className="col-2">
-          <p className="fw-bolder"> Diameter </p>
+          <p className="fw-bolder"> Diameter: </p>
+          <p className=""> {store.infoPlanet[theid]?.diameter} </p>
         </div>
       </div>
     </div>
