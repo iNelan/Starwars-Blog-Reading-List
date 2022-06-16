@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const VehicleCard = () => {
+export const VehicleCard = ({name, id, cost_in_credits, crew, length, passengers, max_atmosphering_speed}) => {
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
@@ -11,14 +11,14 @@ export const VehicleCard = () => {
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">Rey</h5>
+          <h5 className="card-title">{name}</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Max. Speed:</li>
-            <li className="list-group-item">color:</li>
-            <li className="list-group-item">Flight:</li>
-            <li className="list-group-item"></li>
+            <li className="list-group-item">length: {length}</li>
+            <li className="list-group-item">passengers: {passengers}</li>
+            
+            <li className="list-group-item">Credit Cost: {cost_in_credits}</li>
           </ul>
-          <Link to="/SingleVehicle"> 
+          <Link to={"/SingleVehicle/"+id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>

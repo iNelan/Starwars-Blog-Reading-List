@@ -8,7 +8,7 @@ import DetailVehicle from "../component/DetailVehicle.jsx";
 
 import "../../styles/demo.css";
 
-export const SingleVehicle = () => {
+export const SingleVehicle = (props) => {
   return (
     <div className="container">
       <DetailVehicle />

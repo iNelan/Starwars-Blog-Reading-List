@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { useParams } from "react-router-dom";
 
 const DetailPlanet = () => {
-  const {store} = useContext (Context);
+  const {store, actions} = useContext (Context);
   const {theid} = useParams();
 
   console.log(store.infoPlanet);

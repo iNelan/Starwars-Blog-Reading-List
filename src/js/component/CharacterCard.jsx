@@ -16,13 +16,14 @@ export const CharacterCard = ({name, id, gender, hair_color, height, mass }) => 
             <li className="list-group-item">Gender: {gender}</li>
             <li className="list-group-item">Mass: {mass}</li>
             <li className="list-group-item">Height: {height}</li>
-            <li className="list-group-item">Hair Color: {hair_color}</li>
+            
           </ul>
           <Link to={"/SingleCharacter/"+id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More!
           </span></Link>
-          <button type="button" className="btn btn-outline-warning float-end">
+          <button type="button" className="btn btn-outline-warning float-end"
+          onClick={()=>actions.addFavourite(name)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

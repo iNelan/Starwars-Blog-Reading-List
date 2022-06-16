@@ -1,6 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
+import { Context } from "../store/appContext";
+import { useParams } from "react-router-dom";
 
 const DetailVehicle = () => {
+
+  const {store, actions} = useContext (Context);
+  const {theid} = useParams();
+
+  console.log(store.infoVehicle);
+
+
   return (
     <>
       <div className="container">
@@ -11,7 +20,7 @@ const DetailVehicle = () => {
             </div>
             <div className="col-md-8">
               <div className="card-body text-center">
-                <h5 className="card-title">Vehicle Info</h5>
+                <h5 className="card-title">{store.infoVehicle[theid]?.name}</h5>
                 <p className="card-text">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
@@ -27,13 +36,33 @@ const DetailVehicle = () => {
       </div>
       {/* Características */}
     <div className="container">
-    <hr style={{ color: "red", height: "2px" }} />
-      <div className="d-flex justify-content-between">
-        <span className="eyes text-danger fw-bold">Name</span>
-        <span className="name text-danger fw-bold">Max. Speed</span>
-        <span className="genre text-danger fw-bold">Dimension</span>
-        <span className="height text-danger fw-bold">Affiliation</span>
-        <span className="birth text-danger fw-bold">Appearences</span>
+    <div className="lineaSeparadora bg-danger mt-4 mb-4"> </div>
+      <div className="row text-center text-danger fw-bolder">
+        <div className="col-2 r">
+          <p className="fw-bolder"> Name: </p>
+          <p className=""> {store.infoVehicle[theid]?.name} </p>
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> length: </p>
+          <p className=""> {store.infoVehicle[theid]?.length} </p>
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> Crew: </p>
+          <p className=""> {store.infoVehicle[theid]?.crew} </p>
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> Passengers: </p>
+          <p className="mt-3"> {store.infoVehicle[theid]?.passengers} </p>
+          
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> Credit Cost: </p>
+          <p className="mt-3"> {store.infoVehicle[theid]?.cost_in_credits} </p>
+        </div>
+        <div className="col-2">
+          <p className="fw-bolder"> Max.Speed: </p>
+          <p className=""> {store.infoVehicle[theid]?.max_atmosphering_speed} </p>
+        </div>
       </div>
     </div>
  

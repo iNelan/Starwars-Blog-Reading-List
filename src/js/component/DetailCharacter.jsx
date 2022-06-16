@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 const DetailCharacter = () => {
 
-  const {store} = useContext (Context);
+  const {store, actions} = useContext (Context);
   const {theid} = useParams();
 
   console.log(store.infoCharacter);

@@ -1,7 +1,13 @@
-import React from "react";
+import React , { useState , useContext}  from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+import propTypes from "prop-types";
 
 export const Navbar = () => {
+
+  const {store, actions} = useContext (Context);
+
+  
 
 
   return (
@@ -25,24 +31,23 @@ export const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Favoritos <span className="badge badge-light">0</span>
+              Favourites
+              <span className="bg-danger mx-2 px-2 rounded">
+                {store.favourites.length}
+              </span>
             </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
+            <ul
+              className="dropdown-menu text-center text-primary"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              {store.favourites.map((item, index) => (
+                <li key={index} className="d-flex justify-content-around mb-2">
+                  {item}
+                  <button className="btn btn-danger text-white rounded px-1 py-0 " onClick={()=>actions.deleteFavourites(item)}>
+                    <i className="far fa-trash-alt "></i>
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

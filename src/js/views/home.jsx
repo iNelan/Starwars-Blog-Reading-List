@@ -33,11 +33,8 @@ const { store, actions } = useContext(Context);
 
     <h1 className="mt-5">Vehicles</h1>
     <div className="d-flex overflow-auto mt-5">
-      <div className="col-3"><VehicleCard /></div>
-      <div className="col-3"><VehicleCard /></div>
-      <div className="col-3"><VehicleCard /></div>
-      <div className="col-3"><VehicleCard /></div>
-      <div className="col-3"><VehicleCard /></div>
+    <div className="d-flex">{store.infoVehicle.map((item,index)=><VehicleCard key={index} name={item.name} cost_in_credits={item.cost_in_credits} crew={item.crew} length={item.length} passengers={item.passengers} max_atmosphering_speed={item.max_atmosphering_speed} id={index}/>)}</div>
+
     </div>
 
   </div>

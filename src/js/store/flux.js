@@ -8,6 +8,7 @@ const getState = ({
             infoCharacter: [],
             infoPlanet: [],
             infoVehicle: [],
+            favourites: []
         },
         actions: {
             // Use getActions to call a function within a fuction
@@ -46,6 +47,31 @@ const getState = ({
                     }))
                     .catch((err) => console.error(err));
             },
+
+
+
+
+            addFavourites: (favourite) => {
+                const store = getStore();
+                setStore({
+                    ...store,
+                    favourites: store.favourite.concat(favourite)
+                })
+
+            },
+
+
+            deleteFavourites: (element) => {
+                const store = getStore();
+                const eliminado = store.favourite.filter((item, index) => {
+                    return element != item;
+                })
+                setStore({
+                    favourites: eliminado
+                })
+            }
+
+
 
 
 
