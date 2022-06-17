@@ -1,7 +1,14 @@
-import React from "react";
+import React,{ useContext }  from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const CharacterCard = ({name, id, gender, hair_color, height, mass }) => {
+
+
+  const {store,actions} = useContext(Context);
+
+
+
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
@@ -23,7 +30,7 @@ export const CharacterCard = ({name, id, gender, hair_color, height, mass }) => 
             Learn More!
           </span></Link>
           <button type="button" className="btn btn-outline-warning float-end"
-          onClick={()=>actions.addFavourite(name)}>
+          onClick={()=>{actions.addFavorites(name)}}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

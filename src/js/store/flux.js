@@ -8,7 +8,7 @@ const getState = ({
             infoCharacter: [],
             infoPlanet: [],
             infoVehicle: [],
-            favourites: []
+            favorites: []
         },
         actions: {
             // Use getActions to call a function within a fuction
@@ -51,31 +51,33 @@ const getState = ({
 
 
 
-            addFavourites: (favourite) => {
+            addFavorites: (newItem) => {
                 const store = getStore();
-                setStore({
-                    ...store,
-                    favourites: store.favourite.concat(favourite)
-                })
-
+                if (!store.favorites.includes(newItem)) {
+                    setStore({
+                        ...store.favorites,
+                        favorites: store.favorites.concat(newItem)
+                    })
+                }
+                console.log(newItem);
             },
 
 
-            deleteFavourites: (element) => {
+            deleteFavorites: (character) => {
                 const store = getStore();
-                const eliminado = store.favourite.filter((item, index) => {
-                    return element != item;
-                })
-                setStore({
-                    favourites: eliminado
-                })
-            }
+                const personajes = store.favorites
 
+                let newArr = personajes.filter((item) => item !== character)
+                setStore({
+                    favorites: newArr
+                })
+                console.log(newArr)
 
 
 
 
         },
+        
         changeColor: (index, color) => {
             //get the store
             const store = getStore();
@@ -92,7 +94,7 @@ const getState = ({
                 demo: demo
             });
         }
-    }
+    }}
 };
 
 

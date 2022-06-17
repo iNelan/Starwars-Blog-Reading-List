@@ -33,21 +33,19 @@ export const Navbar = () => {
             >
               Favourites
               <span className="bg-danger mx-2 px-2 rounded">
-                {store.favourites.length}
+              {store.favorites.length}
               </span>
             </button>
-            <ul
-              className="dropdown-menu text-center text-primary"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              {store.favourites.map((item, index) => (
-                <li key={index} className="d-flex justify-content-around mb-2">
-                  {item}
-                  <button className="btn btn-danger text-white rounded px-1 py-0 " onClick={()=>actions.deleteFavourites(item)}>
-                    <i className="far fa-trash-alt "></i>
-                  </button>
-                </li>
-              ))}
+              <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+             {store.favorites.length > 0 ? store.favorites.map((item,index)=><li key={index} className="dropdown-item">
+              {item}<button
+							className="btn-trash border border-1 float-end"
+							onClick={() => {actions.deleteFavorites(item)
+              }}>
+							<i className="fas fa-trash-alt"></i>
+						</button>
+              </li>): <li className="dropdown-item text-center fst-italic">
+              (empty)</li>}
             </ul>
           </div>
         </div>
